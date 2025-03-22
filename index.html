@@ -30,20 +30,19 @@
     <h1>歡迎來到郁蓁線上娛樂城</h1>
     
     <!-- 音樂播放 -->
-<audio id="myAudio">
+<audio id="myAudio" autoplay muted>
   <source src="pigzen.mp3" type="audio/mpeg">
   您的瀏覽器不支援音樂播放。
 </audio>
 
+    <button onclick="unmute()">開啟聲音</button>
+
 <script>
-  window.addEventListener('load', function() {
+  function unmute() {
     const audio = document.getElementById('myAudio');
-    audio.play().catch(function(err) {
-      console.log('自動播放失敗：', err);
-    });
-  });
+    audio.muted = false;
+  }
 </script>
-    
     <!-- 顯示圖片 -->
     <div>
       <img src="QQ2.png" alt="睡蓁" style="max-width:100%; height:auto;">
