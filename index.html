@@ -30,10 +30,19 @@
     <h1>歡迎來到郁蓁線上娛樂城</h1>
     
     <!-- 音樂播放 -->
-    <audio controls>
-      <source src="pigzen.mp3" type="audio/mpeg">
-      您的瀏覽器不支援音樂播放。
-    </audio>
+<audio id="myAudio">
+  <source src="pigzen.mp3" type="audio/mpeg">
+  您的瀏覽器不支援音樂播放。
+</audio>
+
+<script>
+  window.addEventListener('load', function() {
+    const audio = document.getElementById('myAudio');
+    audio.play().catch(function(err) {
+      console.log('自動播放失敗：', err);
+    });
+  });
+</script>
     
     <!-- 顯示圖片 -->
     <div>
@@ -43,7 +52,7 @@
     <!-- 按鈕導向其他網站 -->
     <div>
       <button onclick="window.location.href='https://cody0620.github.io/my-react-app/'">郁蓁地雷王</button>
-      <button onclick="window.location.href='https://otherwebsite2.com'">開發中</button>
+      <button onclick="window.location.href='https://otherwebsite2.com'">郁蓁二輪傳說</button>
       <button onclick="window.location.href='https://otherwebsite2.com'">開發中</button>
       <button onclick="window.location.href='https://otherwebsite2.com'">開發中</button>
     </div>
